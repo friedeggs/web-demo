@@ -15,12 +15,12 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def hello():
     # return "Hello"
     return render_template("index.html")
 
-@app.route('/asdf')
+@app.route('/asdf', methods=['GET', 'POST'])
 def asdf():
     # return "Hello"
     return render_template("project_1.html")

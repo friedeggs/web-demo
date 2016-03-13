@@ -34,7 +34,7 @@ function validate(input) {
 
 function addComment(name, comment) {
   var newComment = $('<div class="comment">'+
-  '<image src="heart-green.svg" class="like"/>'+
+  '<img src="/static/heart-green.svg" class="like"/>'+
   '<div class="poster">'+
   name
   +'</div>'+
@@ -66,13 +66,27 @@ function addComment(name, comment) {
 //   img.attr("src", "heart-green.svg");
 // });
 
-$("img").hover(
-  function() {
-    $( this ).attr("src", "heart-green-filled.svg");
-  }, function() {
-    $( this ).attr("src", "heart-green.svg");
-  }
-);
+// $("img").hover(
+//   function() {
+//     $( this ).attr("src", Flask. url_for('static',filename='heart-green-filled.svg'));
+//   }, function() {
+//     $( this ).attr("src", Flask. url_for('static',filename='heart-green.svg'));
+//   }
+// );
+
+$(document).on("mouseenter", "img", function(event){
+    $( this ).attr("src", "/static/heart-green-filled.svg");
+}).on("mouseleave", "img", function(event){
+    $( this ).attr("src", "/static/heart-green.svg");
+});
+
+// $("img").hover(
+//   function() {
+//     $( this ).attr("src", "/static/heart-green-filled.svg");
+//   }, function() {
+//     $( this ).attr("src", "/static/heart-green.svg");
+//   }
+// );
 
 // $( ".poster" ).hover(function() {
 //   $( this ).fadeOut( 100 );
