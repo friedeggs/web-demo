@@ -41,8 +41,8 @@ def store():
     newComment = Comment(poster, comment)
     db.session.add(newComment)
     db.session.commit()
-    print app.config['SQLALCHEMY_DATABASE_URI']
-    print newComment
+    print (app.config['SQLALCHEMY_DATABASE_URI'])
+    print (newComment)
 
 class Comment(db.Model):
     __tablename__ = 'comments'
