@@ -47,6 +47,11 @@ function addComment(name, comment) {
   // });
   // newComment
   newComment.appendTo("#thread");
+
+  $.post("/store_comment", {
+    "poster": name,
+    "comment": comment
+  });
 }
 
 // $("#submit-comment").on("click", function(e) {

@@ -12,8 +12,9 @@
 
 
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask.ext.sqlalchemy import SQLAlchemy
+# import models.Comment
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL',
@@ -32,6 +33,30 @@ def hello():
 def asdf(id):
     # return "/project/_"+id+".html"
     return render_template("/project/"+id+".html")
+
+@app.route('/store_comment', methods=['POST'])
+def store():
+    poster = request.form['poster']
+    comment = request.form['comment']
+    newComment = Comment(poster, comment)
+    db.session.add(newComment)
+    db.session.commit()
+    print app.config['SQLALCHEMY_DATABASE_URI']
+    print newComment
+
+class Comment(db.Model):
+    __tablename__ = 'comments'
+
+    id = db.Column(db.Integer, primary_key=True)
+    poster = db.Column(db.String())
+    comment = db.Column(db.String())
+
+    def __init__(self, poster, comment):
+        self.poster = poster
+        self.comment = comment
+
+    def __repr__(self):
+        return '<id {}>' .format(self.id)
 
 if __name__ == '__main__':
     app.run()
