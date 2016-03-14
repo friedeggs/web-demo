@@ -32,7 +32,8 @@ def hello():
 @app.route('/project/<id>', methods=['GET', 'POST'])
 def asdf(id):
     # return "/project/_"+id+".html"
-    return render_template("/project/"+id+".html")
+    comments = Comment.query.all()
+    return render_template("/project/"+id+".html", comments=comments)
 
 @app.route('/store_comment', methods=['POST'])
 def store():
