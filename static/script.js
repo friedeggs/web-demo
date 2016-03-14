@@ -85,6 +85,12 @@ $(document).on("mouseenter", "img", function(event){
     $( this ).attr("src", "/static/heart-green.svg");
 });
 
+$(document).on("click", ".like", function(event){
+    var val = parseInt($( this ).find("p").text());
+    $( this ).find("p").text(val+1);
+    console.log(val);
+});
+
 // $("img").hover(
 //   function() {
 //     $( this ).attr("src", "/static/heart-green-filled.svg");

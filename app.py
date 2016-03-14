@@ -29,6 +29,10 @@ def hello():
     # return "Hello"
     return render_template("index.html")
 
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
 @app.route('/project/<id>', methods=['GET', 'POST'])
 def asdf(id):
     # return "/project/_"+id+".html"

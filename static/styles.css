@@ -221,10 +221,24 @@ textarea {
   padding-left: 15px;
 }
 
-.like {
+.like img {
   /*background-image: url("heart-green.svg");*/
-  position: relative;
   width: 20px;
   height: 20px;
+  display: inline;
+}
+
+.like {
+  /*width: 40px;*/
+  /*position: relative;*/
+  display: inline;
   float: right;
+}
+
+.like p {
+  display: inline;
+  vertical-align: top;
+  padding-left: 5px;
+  line-height: 20px;
+  color: gray;
 }
