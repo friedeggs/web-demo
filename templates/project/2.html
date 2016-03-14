@@ -55,8 +55,16 @@
         <input type="submit" name="submit-comment" id="submit-comment" value="Comment"/>
       </form>
       <div id="thread">
-        <div class="comment"><img src="{{ url_for('static',filename='heart-green.svg') }}" class="like"><div class="poster">Moi</div><div class="comment-text">comment here</div></div>
-        <div class="comment"><img src="{{ url_for('static',filename='heart-green.svg') }}" class="like"><div class="poster">Ron</div><div class="comment-text">This is a comment here lofgh olki nomg o,l. Hkjk ooii kl g.</div></div>
+        <div class="comment">
+          <div class="like">
+            <img src="{{ url_for('static',filename='heart-green.svg') }}"><p>0</p>
+          </div>
+          <div class="poster">Moi</div><div class="comment-text">comment here</div></div>
+        <div class="comment">
+          <div class="like">
+            <img src="{{ url_for('static',filename='heart-green.svg') }}"><p>0</p>
+          </div>
+          <div class="poster">Ron</div><div class="comment-text">This is a comment here lofgh olki nomg o,l. Hkjk ooii kl g.</div></div>
       </div>
     </div>
   </div>
