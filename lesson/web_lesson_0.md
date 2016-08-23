@@ -41,7 +41,7 @@ HTML, or Hypertext Markup Language, defines the basic structure and content of e
 
 ### Basic structure of an HTML Document
 <!-- ![alt text](https://github.com/TechRetreat/learnathon/blob/web-outline/web/html_dissected.png "Boring alt text for an image of a labelled HTML document") -->
-![alt text](html_dissected.png "Boring alt text for an image of a labelled HTML document")
+![alt text](snapshots/html_dissected.png "Boring alt text for an image of a labelled HTML document")
 
 ### &lt;h2&gt;Elements, Tags, and Attributes&lt;/h2&gt;
 
@@ -80,7 +80,7 @@ The `class` attribute lets us group related elements together so we can do the s
 
 The `id` attribute is used to name a unique element.
 
-Here's what your HTML file should look like now: [html file](html_snapshot_0.html)
+Here's what your HTML file should look like now: [html file](snapshots/html_snapshot_0.html)
 
 ## CSS Beauty Makeover
 
@@ -420,7 +420,7 @@ Set the background image for `body` using
 Now make all the font white. (Hint: use the "color" attribute and "body" selector.)
 
 Using the above file as a reference, modify your current CSS file.
-[Here's an example updated CSS file.](css_snapshot_1.css)
+[Here's an example updated CSS file.](snapshots/css_snapshot_1.css)
 
 ## Adding interactivity with Javascript (not Java!)
 
